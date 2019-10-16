@@ -7,29 +7,6 @@
  */
 apply plugin: 'java-library'
 apply plugin: 'war'
-
-plugins {
-    // Apply the java-library plugin to add support for Java Library
-    id 'java-library'
-}
-
-repositories {
-    // Use jcenter for resolving dependencies.
-    // You can declare any Maven/Ivy/file repository here.
-    jcenter()
-}
-
-dependencies {
-    // This dependency is exported to consumers, that is to say found on their compile classpath.
-    api 'org.apache.commons:commons-math3:3.6.1'
-
-    // This dependency is used internally, and not exposed to consumers on their own compile classpath.
-    implementation 'com.google.guava:guava:28.0-jre'
-
-    // Use JUnit test framework
-    testImplementation 'junit:junit:4.12'
-}
-
 apply plugin: 'com.bmuschko.tomcat'
 apply plugin: 'eclipse-wtp'
 
@@ -46,11 +23,16 @@ buildscript {
 
 
 dependencies {
-         def tomcatVersion = '8.0.46'
+         def tomcatVersion = '9.0.27'
          tomcat "org.apache.tomcat.embed:tomcat-embed-core:${tomcatVersion}",
          "org.apache.tomcat.embed:tomcat-embed-logging-juli:${tomcatVersion}",
          "org.apache.tomcat.embed:tomcat-embed-jasper:${tomcatVersion}"
          api 'org.apache.commons:commons-math3:3.6.1'
+		 // This dependency is used internally, and not exposed to consumers on their own compile classpath.
+		 implementation 'com.google.guava:guava:28.0-jre'
+		
+		 // Use JUnit test framework
+		 testImplementation 'junit:junit:4.12'
 }
 
 
