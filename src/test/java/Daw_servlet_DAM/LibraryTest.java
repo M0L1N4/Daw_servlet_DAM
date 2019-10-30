@@ -4,6 +4,9 @@
 package Daw_servlet_DAM;
 
 import org.junit.Test;
+
+import daw_servlet_DAM.Library;
+
 import static org.junit.Assert.*;
 
 public class LibraryTest {

@@ -1,4 +1,4 @@
-package Daw_servlet_DAM;
+package daw_servlet_DAM;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
