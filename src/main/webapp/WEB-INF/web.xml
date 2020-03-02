@@ -8,7 +8,8 @@
 		</description>
 		<display-name>AppIndex</display-name>
 		<servlet-name>AppIndex</servlet-name>
-		<servlet-class>Daw_servlet_DAM.AppIndex</servlet-class>
+		<servlet-class>daw_servlet_DAM.AppIndex</servlet-class>
+		
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>AppIndex</servlet-name>
